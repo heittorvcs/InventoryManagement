@@ -56,6 +56,7 @@ public class Main {
             System.out.println("4. Remover");
             System.out.println("5. Listar Todos");
             System.out.println("6. Gerar Gráfico (.dot)");
+            System.out.println("7. Visualizar Estrutura da Árvore");
             System.out.println("0. Voltar");
             System.out.print("Opção: ");
             op = lerInteiro();
@@ -106,6 +107,9 @@ public class Main {
                 case 6:
                     arvoreProdutos.gerarArquivoDOT("produtos.dot");
                     break;
+                case 7:
+                    arvoreProdutos.imprimirEstrutura();
+                    break;
             }
         }
     }
@@ -121,6 +125,7 @@ public class Main {
             System.out.println("4. Remover");
             System.out.println("5. Listar Todos");
             System.out.println("6. Gerar Gráfico (.dot)");
+            System.out.println("7. Visualizar Estrutura da Árvore");
             System.out.println("0. Voltar");
             System.out.print("Opção: ");
             op = lerInteiro();
@@ -169,6 +174,9 @@ public class Main {
                 case 6:
                     arvoreFornecedores.gerarArquivoDOT("fornecedores.dot");
                     break;
+                case 7:
+                    arvoreFornecedores.imprimirEstrutura();
+                    break;
             }
         }
     }
@@ -184,6 +192,7 @@ public class Main {
             System.out.println("4. Remover");
             System.out.println("5. Listar Todos");
             System.out.println("6. Gerar Gráfico (.dot)");
+            System.out.println("7. Visualizar Estrutura da Árvore");
             System.out.println("0. Voltar");
             System.out.print("Opção: ");
             op = lerInteiro();
@@ -231,6 +240,9 @@ public class Main {
                 case 6:
                     arvoreClientes.gerarArquivoDOT("clientes.dot");
                     break;
+                case 7: 
+                arvoreClientes.imprimirEstrutura(); 
+                break;
             }
         }
     }
@@ -246,6 +258,7 @@ public class Main {
             System.out.println("4. Remover");
             System.out.println("5. Listar Todos");
             System.out.println("6. Gerar Gráfico (.dot)");
+            System.out.println("7. Visualizar Estrutura da Árvore");
             System.out.println("0. Voltar");
             System.out.print("Opção: ");
             op = lerInteiro();
@@ -291,6 +304,9 @@ public class Main {
                 case 6:
                     arvoreCategorias.gerarArquivoDOT("categorias.dot");
                     break;
+                case 7:
+                    arvoreCategorias.imprimirEstrutura();
+                    break;
             }
         }
     }
@@ -306,6 +322,7 @@ public class Main {
             System.out.println("3. Remover Venda");
             System.out.println("4. Listar Todas");
             System.out.println("5. Gerar Gráfico (.dot)");
+            System.out.println("6. Visualizar Estrutura da Árvore");
             System.out.println("0. Voltar");
             System.out.print("Opção: ");
             op = lerInteiro();
@@ -360,6 +377,9 @@ public class Main {
                 
                 case 5:
                     arvoreVendas.gerarArquivoDOT("vendas.dot");
+                    break;
+                case 6:
+                    arvoreVendas.imprimirEstrutura();
                     break;
             }
         }

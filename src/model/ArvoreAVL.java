@@ -254,4 +254,28 @@ public class ArvoreAVL<T extends Identificavel> {
     public boolean estaVazia() {
         return this.raiz == null;
     }
+
+    public void imprimirEstrutura() {
+        if (this.raiz == null) {
+            System.out.println(" (Árvore vazia)");
+        } else {
+            System.out.println("\n--- Estrutura Visual da Árvore (Raiz à Esquerda) ---");
+            imprimirEstruturaRecursivo(this.raiz, "", true);
+            System.out.println("----------------------------------------------------\n");
+        }
+    }
+
+    private void imprimirEstruturaRecursivo(NoAVL<T> no, String prefixo, boolean isFim) {
+        if (no != null) {
+            System.out.print(prefixo);
+            System.out.print(isFim ? "└── " : "├── ");
+            
+            System.out.println(no.getDado().toString()); 
+            
+            String novoPrefixo = prefixo + (isFim ? "    " : "│   ");
+            
+            imprimirEstruturaRecursivo(no.getEsquerdo(), novoPrefixo, false);
+            imprimirEstruturaRecursivo(no.getDireito(), novoPrefixo, true);
+        }
+    }
 }
